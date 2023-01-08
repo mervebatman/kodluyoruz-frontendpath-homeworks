@@ -1,0 +1,28 @@
+//Break & Continue
+//Donguyu durdurma => break;
+//Donguyu devam ettirme => continue
+const LOREM_LIST = [
+    'lorem', 'ipsum', 'dolor', 'amet', 'consecteur', 'adipisicing', 'elit'
+];
+
+let counter = 0;
+
+//for (; counter <10; counter++) {
+ //   console.log(counter);
+  //  if(counter === 5) {break}  
+//}
+
+//for (; counter <10; counter++) {
+    //  if(counter === 5) {continue}
+    //console.log(counter);
+//}
+
+const UL_DOM = document.querySelector('#userList');
+
+let index = 0;
+for(; index < LOREM_LIST.length; index++) {
+    if(LOREM_LIST[index] == "dolor") {continue}
+    let LI_DOM = document.createElement('li');
+    LI_DOM.innerHTML =LOREM_LIST[index] ;
+    UL_DOM.appendChild(LI_DOM);
+}
